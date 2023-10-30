@@ -72,9 +72,7 @@ const Pokemones = props => {
                             })}
                         </select>
                         <button type="button" className="btn btn-warning mt-3  w-25" onClick={irAPokemon} disabled={isLoading}>Ver Detalle</button>
-                        <div className="containter">
-                            {isLoading ? <LoadingSpinner /> : '  '}
-                        </div>
+
                     </div>
                 </div>
                 {verdetalle &&
@@ -82,10 +80,11 @@ const Pokemones = props => {
                         <div className="col d-flex justify-content-center">
 
                             <div className="d-flex flex-row border w-50 pl-5 mt-4">
-                                <div className="col">
-                                    <img src={fotoPokemon} width="200px" height="200px" />
+                                <div className="col d-flex flex-column justify-content-center  align-items-center">
+                                    {isLoading ? <LoadingSpinner /> : <img src={fotoPokemon} width="200px" height="200px" />}
+
                                 </div>
-                                <div className="col">
+                                <div className="col  text-start">
                                     <h3> {name}</h3>
                                     <ul className="list-group border-0 text-start" width="200px">
                                         {statPokemon.map(stat => {
