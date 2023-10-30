@@ -10,15 +10,12 @@ const ReadAPI = props => {
     }, [])
     async function ReadAPI() {
         try {
-
             const response = await fetch('https://pokeapi.co/api/v2/pokemon/')
             const data = await response.json()
-
             setPokemones(data.results)
             console.log(pokemones)
         } catch (error) {
             console.log(error)
-
         }
     }
 
@@ -26,6 +23,5 @@ const ReadAPI = props => {
         <></>
     )
 }
-
 
 export default ReadAPI

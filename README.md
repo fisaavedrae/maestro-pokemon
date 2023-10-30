@@ -1,8 +1,23 @@
-# React + Vite
+# Descripción
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+En este desafío pondremos a prueba tus nuevas habilidades con React Router para consolidar el redireccionamiento de rutas, la obtención de parámetros en una ruta y la
+asignación de una clase activa a la ruta que se esté visitando en una SPA.
 
-Currently, two official plugins are available:
+# Habilidades a evaluar
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+● Obtener los parámetros de una ruta con useParams()
+● Redireccionar programáticamente usando useNavigate()
+● Usar NavLink para definir una clase activa a la ruta que se esté visitando.
+
+# Requerimientos
+1. Asignar una clase active a la ruta que el usuario consulte usando NavLink.
+(3 Puntos)
+2. Redireccionar programáticamente al usuario usando el hook useNavigate.
+(4 Puntos)
+3. Obtener parámetros de la URL usando el hook useParams.
+(3 Puntos)
+
+
+
+- [repo](https://github.com/fisaavedrae/maestro-pokemon) 
+- [liveapp](https://maestro-pokemon.vercel.app/) 

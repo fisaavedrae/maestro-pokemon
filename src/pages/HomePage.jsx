@@ -1,11 +1,9 @@
 import React from 'react'
 import NavBar from '../components/NavBar'
 
-
 const HomePage = props => {
     return (
         <>
-
             <div className="container">
                 <div className="row">
                     <div className="col">
@@ -22,6 +20,5 @@ const HomePage = props => {
         </>
     )
 }
-
 
 export default HomePage

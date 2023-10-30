@@ -1,11 +1,12 @@
 import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
-import ubicacion from '../assets/ubicacion.png'
 import { MyContext } from '../components/context/MyContext'
+import ubicacion from '../assets/ubicacion.png'
 
 const NavBar = props => {
     const setActiveClass = ({ isActive }) => (isActive ? "nav-link link-warning" : "nav-link");
     const { nombrePokemon } = useContext(MyContext)
+    const ruta = `/pokemones/${nombrePokemon}`;
     return (
         <>
             <nav className="navbar navbar-expand-lg bg-secondary mb-1 mt-0">
@@ -17,7 +18,7 @@ const NavBar = props => {
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div className="navbar-nav">
                             <NavLink to='/' className={setActiveClass}>Home</NavLink>
-                            <NavLink to='/pokemones/:name' className={setActiveClass}  >Pokemones</NavLink>
+                            <NavLink to={ruta} className={setActiveClass}  >Pokemones</NavLink>
                         </div>
                     </div>
                 </div>
@@ -25,7 +26,5 @@ const NavBar = props => {
         </>
     )
 }
-
-
 
 export default NavBar
