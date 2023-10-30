@@ -17,6 +17,7 @@ const Pokemones = props => {
         setNombrePokemon(ruta)
         navigate(`/pokemones/${ruta}`);
         setVerdetalle(true)
+        console.log('llamo api con: ', ruta)
         ReadAPI()
     };
     const handleChange = (event) => {
@@ -25,9 +26,18 @@ const Pokemones = props => {
     }
 
     async function ReadAPI() {
+        let param = ''
         try {
             setIsLoading(true);
-            const response = await fetch('https://pokeapi.co/api/v2/pokemon/' + name)
+            if (name === 'pokemon') {
+                param = ruta
+                console.log('llamo a api con ruta', ruta)
+            }
+            else {
+                param = name
+                console.log('llamo a api con name', name)
+            }
+            const response = await fetch('https://pokeapi.co/api/v2/pokemon/' + param)
             const data = await response.json()
             setFotoPokemon(data.sprites.front_default)
             SetStatPokemon(data.stats)
