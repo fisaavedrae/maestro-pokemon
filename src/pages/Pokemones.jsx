@@ -14,11 +14,16 @@ const Pokemones = props => {
     const { name } = useParams()
 
     const irAPokemon = () => {
-        setNombrePokemon(ruta)
-        navigate(`/pokemones/${ruta}`);
-        setVerdetalle(true)
-        console.log('llamo api con: ', ruta)
-        ReadAPI()
+
+        if (ruta != '' && ruta != 'pokemon') {
+            setNombrePokemon(ruta)
+            navigate(`/pokemones/${ruta}`);
+            setVerdetalle(true)
+            console.log('llamo api con: ', ruta)
+            ReadAPI()
+        }
+        else { setRuta('pokemon') }
+
     };
     const handleChange = (event) => {
         console.log(`Seleccionaste ${event.target.value}`);
@@ -67,7 +72,9 @@ const Pokemones = props => {
                             })}
                         </select>
                         <button type="button" className="btn btn-warning mt-3  w-25" onClick={irAPokemon} disabled={isLoading}>Ver Detalle</button>
-                        {isLoading ? <LoadingSpinner /> : ''}
+                        <div className="containter">
+                            {isLoading ? <LoadingSpinner /> : '  '}
+                        </div>
                     </div>
                 </div>
                 {verdetalle &&
