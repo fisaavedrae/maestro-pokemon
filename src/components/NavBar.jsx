@@ -11,7 +11,7 @@ const NavBar = props => {
         <>
             <nav className="navbar navbar-expand-lg bg-secondary mb-1 mt-0">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#"><img src={ubicacion} alt="Bootstrap" height="60" /></a>
+                    <img src={ubicacion} alt="Bootstrap" height="60" />
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
