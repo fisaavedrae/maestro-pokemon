@@ -6,8 +6,11 @@ asignación de una clase activa a la ruta que se esté visitando en una SPA.
 # Habilidades a evaluar
 
 ● Obtener los parámetros de una ruta con useParams()
+
 ● Redireccionar programáticamente usando useNavigate()
+
 ● Usar NavLink para definir una clase activa a la ruta que se esté visitando.
+
 
 # Requerimientos
 1. Asignar una clase active a la ruta que el usuario consulte usando NavLink.
