@@ -34,7 +34,7 @@ const Pokemones = props => {
         let param = ''
         try {
             setIsLoading(true);
-            if (name === 'pokemon') {
+            if (name === 'pokemon' || name != ruta) {
                 param = ruta
                 console.log('llamo a api con ruta', ruta)
             }
