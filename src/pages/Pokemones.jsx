@@ -44,7 +44,7 @@ const Pokemones = props => {
             }
             const response = await fetch('https://pokeapi.co/api/v2/pokemon/' + param)
             const data = await response.json()
-            setFotoPokemon(data.sprites.front_default)
+            setFotoPokemon(data.sprites.other.home.front_default)
             SetStatPokemon(data.stats)
             setIsLoading(false)
         } catch (error) {
