@@ -34,7 +34,8 @@ const Pokemones = props => {
         let param = ''
         try {
             setIsLoading(true);
-            if (name === 'pokemon' || name != ruta) {
+            console.log('name: ', name, 'ruta: ', ruta, 'param: ', param)
+            if (name === 'pokemon' || name != ruta && ruta != 'Pokemones') {
                 param = ruta
                 console.log('llamo a api con ruta', ruta)
             }
@@ -42,6 +43,9 @@ const Pokemones = props => {
                 param = name
                 console.log('llamo a api con name', name)
             }
+
+            const rutaAPI = 'https://pokeapi.co/api/v2/pokemon/' + param
+            console.log('param: ', param, 'rutaAPI: ', rutaAPI)
             const response = await fetch('https://pokeapi.co/api/v2/pokemon/' + param)
             const data = await response.json()
             setFotoPokemon(data.sprites.other.home.front_default)
@@ -81,6 +85,7 @@ const Pokemones = props => {
 
                             <div className="d-flex flex-row border w-50 pl-5 mt-4">
                                 <div className="col d-flex flex-column justify-content-center  align-items-center">
+                                    {console.log('fotopokemon: ', fotoPokemon)}
                                     {isLoading ? <LoadingSpinner /> : <img src={fotoPokemon} width="200px" height="200px" />}
 
                                 </div>
